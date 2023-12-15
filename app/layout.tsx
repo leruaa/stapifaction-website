@@ -1,5 +1,5 @@
 import Header from '@/components/header'
-import '../globals.css'
+import './globals.css'
 
 export default function Layout({
   children,
@@ -11,9 +11,9 @@ export default function Layout({
       <body>
         <main>
           <Header />
-          <section className="container mx-auto">
+          <div className="container mx-auto flex">
             {children}
-          </section>
+          </div>
         </main>
       </body>
     </html>

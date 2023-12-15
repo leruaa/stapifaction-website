@@ -9,20 +9,13 @@ export default function Layout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
-        <main>
-          <Header />
-          <div className="container mx-auto flex">
-            <aside className="flex-none w-64">
-              <SideBar />
-            </aside>
-            <section className="flex-auto">
-              {children}
-            </section>
-          </div>
-        </main>
-      </body>
-    </html>
+    <>
+      <aside className="flex-none w-64">
+        <SideBar />
+      </aside>
+      <section className="flex-auto">
+        {children}
+      </section>
+    </>
   )
 }
