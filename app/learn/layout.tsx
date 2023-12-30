@@ -1,4 +1,3 @@
-import Header from '@/components/header'
 import SideBar from '@/components/side-bar'
 
 import '../globals.css'
@@ -13,7 +12,7 @@ export default function Layout({
       <aside className="flex-none w-64">
         <SideBar />
       </aside>
-      <section className="flex-auto">
+      <section className="flex-auto ml-10 mr-96">
         {children}
       </section>
     </>

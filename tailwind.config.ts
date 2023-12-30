@@ -11,6 +11,9 @@ const config: Config = {
     pattern: /hljs+/,
   }],
   theme: {
+    container: {
+      padding: '4rem',
+    },
     hljs: {
       theme: 'github-dark',
     },
