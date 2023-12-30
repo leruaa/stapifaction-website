@@ -1,0 +1,12 @@
+import Files from '@/components/files'
+import CodeFiles from '@/components/code-files'
+
+# Introduction
+
+Stapifaction is a framework designed to make it trivial to persist Rust data
+structures to [static APIs](https://www.seancdavis.com/posts/lets-talk-about-static-apis/).
+At its core, Stapifaction design allows you to easily specify into what folders and files
+you want to persist your existing data structures, using `#[derive]` attributes.
+
+If you choose to persist your structs to JSON files (using the default `json` feature), 
+[Serde](https://serde.rs/) is used behind the scenes.
