@@ -8,11 +8,43 @@ export default () => (
   <NavigationMenu.Root asChild={true}>
     <nav>
       <NavigationMenu.List>
-        <NavigationMenu.Item>
-          <Link href="/learn">Overview</Link>
+        <NavigationMenu.Item className="my-2">
+          <Link href="/learn">Introduction</Link>
         </NavigationMenu.Item>
-        <NavigationMenu.Item>
-          <Link href="/learn/install">Installation</Link>
+        <NavigationMenu.Item className="my-2">
+          <Link href="/learn/getting-started">Getting started</Link>
+          <NavigationMenu.Sub>
+            <NavigationMenu.List className="ml-4">
+              <NavigationMenu.Item>
+                <Link href="/learn/getting-started/first-example">First example</Link>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <Link href="/learn/getting-started/persist-collections">Persist collections</Link>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <Link href="/learn/getting-started/multiple-files">Multiple files/folders</Link>
+              </NavigationMenu.Item>
+            </NavigationMenu.List>
+          </NavigationMenu.Sub>
+        </NavigationMenu.Item>
+        <NavigationMenu.Item className="my-2">
+          <Link href="/learn/using-derive">Using derive</Link>
+          <NavigationMenu.Sub>
+            <NavigationMenu.List className="ml-4">
+              <NavigationMenu.Item>
+                <Link href="/learn/using-derive/attributes"><code>path</code> attribute</Link>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <Link href="/learn/using-derive/attributes"><code>id</code> attribute</Link>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <Link href="/learn/using-derive/attributes"><code>expand</code> attribute</Link>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <Link href="/learn/concepts/serde">Supported Serde attributes</Link>
+              </NavigationMenu.Item>
+            </NavigationMenu.List>
+          </NavigationMenu.Sub>
         </NavigationMenu.Item>
       </NavigationMenu.List>
     </nav>
@@ -25,7 +57,10 @@ const Link = ({ href, children }: { href: string, children: React.ReactNode }) =
 
   return (
     <NavigationMenu.Link asChild={true} active={isActive}>
-      <NextLink className="data-[active]:font-semibold" href={href}>{children}</NextLink>
+      {isActive
+        ? <span>{children}</span>
+        : <NextLink href={href}>{children}</NextLink>
+      }
     </NavigationMenu.Link>
   );
 };

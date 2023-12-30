@@ -1,0 +1,12 @@
+import Files from '@/components/files'
+import CodeFiles from '@/components/code-files'
+import CollectionExample from '@/examples/collection.mdx'
+
+# Persist collections
+
+How about persisting not only a single struct but all item in a collection? Just add the
+`ToJsonIterable` trait in scope to add `to_json()` to collections. By default each collection
+item will be persisted using the index as the file name, but this can be customized with the
+`#[persistable(id)]` attribute on a struct field, as in the example below.
+
+<CodeFiles code={<CollectionExample />} files={<Files  files={{"users": ["ehdz.json", "ioeq.json", "wqpf.json"]}} />} />
