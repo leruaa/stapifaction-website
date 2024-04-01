@@ -4,12 +4,15 @@ import BasicExample from '@/examples/basic.mdx'
 
 # First example
 
-Let's start by writing a very basic program persisiting a struct. In the following example,
-we use the default `json` feature to serialize the `User` struct to a JSON file,
-using [Serde](https://serde.rs/).
+Let's start by writing a very basic program persisiting a struct. In the
+following example, we use the default `json` feature to serialize the `User`
+struct to a JSON file, using [Serde].
 
 <CodeFiles code={<BasicExample />} files={<Files files={{".": ["data.json"]}} />} />
 
-Running the code above will create a <code>./data.json</code> file. Have a look at
-the [supported Serde attributes](/learn/supported-serde-attributes) if you want
-to customize how structs are serialized.
+Running the code above will create a <code>./data.json</code> file. You can
+have a look at the [supported Serde attributes] if you want to customize how
+structs are serialized.
+
+[Serde]: https://serde.rs/
+[supported Serde attributes]: /learn/supported-serde-attributes

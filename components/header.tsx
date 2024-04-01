@@ -24,7 +24,7 @@ export default () => (
           </NavigationMenu.Item>
           <NavigationMenu.Item>
             <NavigationMenu.Link asChild={true}>
-              <Link href="/learn" className="link">
+              <Link href="https://github.com/stapifaction/stapifaction" className="link" target="_blank">
                 <Image src="/img/github-mark.svg" alt="Github" width={20} height={20} />
               </Link>
             </NavigationMenu.Link>
